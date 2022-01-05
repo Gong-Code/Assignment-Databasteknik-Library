@@ -1,0 +1,74 @@
+﻿@page
+@model Library_inlämningsuppgift.Pages.Books.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Books</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<div class="dropdown indexDropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Sort by
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=titleasc">Title asc</a></li>
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=titledesc">Title desc</a></li>
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=authorasc">Author asc</a></li>
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=authordesc">Author desc</a></li>
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=categoryasc">Category asc</a></li>
+        <li><a Style="color:black"  asp-route-sortOrder="?sort=categorydesc">Category desc</a></li>
+    </ul>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Author.AuthorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Price) $
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].AmountOfPage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Book) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Author.AuthorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) $
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountOfPage)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library_inlämningsuppgift", "Library_inlämningsuppgift\Library_inlämningsuppgift.csproj", "{01B0D9CD-11C1-46A8-9201-C8E3B728EA2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01B0D9CD-11C1-46A8-9201-C8E3B728EA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B0D9CD-11C1-46A8-9201-C8E3B728EA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B0D9CD-11C1-46A8-9201-C8E3B728EA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B0D9CD-11C1-46A8-9201-C8E3B728EA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3229B21E-28AD-414B-881A-4E02BB7F0CE3}
+	EndGlobalSection
+EndGlobal
